@@ -25,7 +25,7 @@ namespace Star_Wars_Trench_Run
 
         private void Form1_Click(object sender, EventArgs e)
         {
-            Graphics g = this.CreateGraphics();
+            Graphics g = this.CreateGraphics(); 
             SolidBrush textBrush = new SolidBrush(Color.Yellow);
             Font textFont = new Font("Arial", 12, FontStyle.Bold);
             Font textFont2 = new Font("Arial", 18, FontStyle.Bold);
