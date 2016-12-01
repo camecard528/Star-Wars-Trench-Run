@@ -12,7 +12,7 @@ using System.Threading;
 using System.Media;
 /// Star Wars Trench Run 
 /// Program showing the plans on how to destroy the death str
-/// Cameron Cardiff November 2016
+/// Cameron Cardiff November 2016 
 
 namespace Star_Wars_Trench_Run
 {
