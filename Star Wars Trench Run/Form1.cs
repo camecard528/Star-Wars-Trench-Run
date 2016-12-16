@@ -11,8 +11,8 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Media;
 /// Star Wars Trench Run 
-/// Program showing the plans on how to destroy the death str
-/// Cameron Cardiff November 2016 
+/// Program showing the plans on how to destroy the death star
+/// Cameron Cardiff November 2016    
 
 namespace Star_Wars_Trench_Run
 {
@@ -39,10 +39,10 @@ namespace Star_Wars_Trench_Run
             SoundPlayer imperial = new SoundPlayer(Properties.Resources.imperial);
             SoundPlayer explosion = new SoundPlayer(Properties.Resources.explosion);
             theme.Play();
+            label1.Visible = false;
             //for loop that makes the opening text scroll up
-            for (int y = 400; y < this.Height && y >= -240; y = y - 2)
+            for (int y = 400; y >= -240; y = y - 2)
             {
-                label1.Visible = false;
                 g.DrawString("Rebel spies managed to steal secret plans to the Empire's ultimate", scrollFont, textBrush, 35, y);
                 g.DrawString("weapon, the Death Star an armored space station with enough", scrollFont, textBrush, 35, y + 15);
                 g.DrawString("power to destroy an entire planet.", scrollFont, textBrush, 35, y + 30);
@@ -81,7 +81,7 @@ namespace Star_Wars_Trench_Run
             int bomb = 40;
             int s = 1;
             int size = randgen.Next(25, 50);
-            SolidBrush starBrush2 = new SolidBrush(Color.Red);
+            SolidBrush explosionBrush = new SolidBrush(Color.Red);
 
             //for loop that draws the xwing flying away from the death star and 
             //dropping a bomb to the reactor core. 
@@ -113,7 +113,7 @@ namespace Star_Wars_Trench_Run
                 if (x < 149)
                 {
                     s = s + 4;
-                    g.FillEllipse(starBrush2, 290 - s/2, 150 -s/2, size + s, size + s);
+                    g.FillEllipse(explosionBrush, 290 - s/2, 150 -s/2, size + s, size + s);
                 }
                 Thread.Sleep(10);
             }
